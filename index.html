@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>二维码</title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery.qrcode.js"></script>
+</head>
+
+<body>
+	<div id="QRcodediv"></div>
+	<br>
+	<script>
+		function getQR() {
+			$("#QRcodediv").empty().qrcode({
+				width: 280,
+				height: 280,
+				text: 'QRCode with logo and  description below',
+				src: 'logo.png',
+				content:"QRCode with logo and  description below",
+				imgWidth: 60,
+				imgHeight: 60
+			});
+			$("#QRcodediv").show();
+		}
+
+		getQR();
+
+	</script>
+</body>
+
+</html>
